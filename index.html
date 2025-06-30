@@ -65,39 +65,45 @@
     <!-- ***** Work ***** -->
 
     <section class="work" id="work">
-      <div class="row">
-        <h2>My Work</h2>
-        <div class="work__boxes">
+              <div class="work__boxes">
 
           <!-- Each div with the work__box class is a project. -->
 
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Portfolio Template</h3>
-              <p>
-                A free Open Source Portfolio for anyone to use for free.
-              </p>
-              <ul class="work__list">
-                <li>HTML</li>
-                <li>SCSS</li>
-                <li>JavaScript</li>
-                <li>Parcel</li>
-              </ul>
+          <div class="project__container">
+    <h3 class="section-title">🖼️ Automatic Image Caption Generation</h3>
+    <p class="project__subtitle">Academic Project | Computer Vision & NLP | Dataset: Flickr8k</p>
 
-              <div class="work__links">
-                <a href="https://nisar.surge.sh" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/nisarhassan12/portfolio" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-1.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
+    <div class="project__content">
+      <p>
+        This project explores <strong>image captioning</strong>, a challenging multimodal task in artificial intelligence that consists of generating a coherent textual description for a given image. It combines deep learning techniques from both <strong>computer vision</strong> and <strong>natural language processing</strong>.
+      </p>
 
+      <h4 class="project__heading">🎯 Objectives</h4>
+      <ul>
+        <li>Automatically generate accurate and meaningful captions for images.</li>
+        <li>Implement a deep learning model inspired by the <a href="https://arxiv.org/abs/1411.4555" target="_blank">Show and Tell</a> paper.</li>
+        <li>Leverage both visual and semantic features to understand context.</li>
+      </ul>
+
+      <h4 class="project__heading">🧠 Model & Architecture</h4>
+      <ul>
+        <li><strong>Image Encoding:</strong> ResNet pretrained on ImageNet; feature vectors of shape <code>(1, 2048)</code> extracted from the penultimate layer (softmax removed).</li>
+        <li><strong>Text Encoding:</strong> Word embeddings using GloVe; final embedding matrix of shape <code>(1660, 220)</code> representing a vocabulary of 1660 words.</li>
+        <li>Semantic relationships between words (e.g., <em>king - man + woman = queen</em>) are captured through vector arithmetic.</li>
+      </ul>
+
+      <h4 class="project__heading">📷 Example Output</h4>
+      <div class="work__image-box">
+              <img src="./images/multimodal_project.jpg" class="work__image" alt="Project 1" />
+            </div>
+
+      <div class="project__links">
+        <a href="https://github.com/Calliope-commits/Generation-de-la-legende-d-une-image-" target="_blank" class="btn">View GitHub Repo</a>
+        <!-- Optionally, add a demo link if you deploy the project -->
+      </div>
+    </div>
+  </div>
+<!--
           <div class="work__box">
             <div class="work__text">
               <h3>Calculator</h3>
@@ -158,7 +164,7 @@
     </section>
 
    
-
+  -->
   
 
     <!-- ***** About ***** -->
@@ -169,19 +175,34 @@
         <div class="about__content">
           <div class="about__text">
             <!-- Replace the below paragraph with info about yourself -->
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos id
-              nostrum illo harum blanditiis, tenetur eum suscipit cupiditate
-              in vel, ex quam quidem quos mollitia labore aut sunt eius
-              ratione molestiae fuga veniam facere similique voluptate.
+          <p style="text-align: justify;">
+              I'm Aissatou Signate, a passionate Machine Learning Engineer and Data Scientist based in Île-de-France, France.
+              I specialize in building smart, scalable AI solutions, particularly in computer vision and deep learning.
             </p>
-            <!-- Provide a link to your resume -->
-            <a href="#" class="btn">My Resume</a>
+            <p style="text-align: justify;">
+              With a dual background in computer science and economics, I bring both technical expertise and analytical thinking
+              to solve complex problems.
+            </p>
+            <p style="text-align: justify;">
+              Over the past few years, I’ve worked on various impactful projects—from medical image analysis to data-driven
+              decision-making tools. Whether it’s fine-tuning neural networks or exploring new datasets, I thrive on turning data
+              into insights and innovation.
+            </p>
+            <p style="text-align: justify;">
+              📍 Based in Paris region, currently open to V.I.E missions, full-time roles, or AI consulting projects.
+            </p>
+            <p style="text-align: justify;">
+              Beyond coding, I’m passionate about ethical AI, continuous learning, and creating tools that make a real difference.
+            </p>
+            <a href="mailto:signate.pro@gmail.com?subject=Demande%20de%20CV" class="btn">
+              CV available upon request
+            </a>
           </div>
 
           <div class="about__photo-container">
             <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/syed-ali-hussnain.jpg" alt="" />
+            <img class="about__photo" src="images/about_me.jpg" alt="" style="width: 600px; height: auto;" />
+
           </div>
         </div>
       </div>
@@ -194,16 +215,15 @@
     <div class="row">
       <h2>Get in Touch</h2>
       <div class="contact__info">
-        <p>
-          Are you looking for a fast-performing and user-friendly website to
-          represent your product or business? or looking for any kind of
-          consultation? or want to ask questions? or have some advice for me
-          or just want to say "Hi 👋" in any case feel free to Let me know. I
-          will do my best to respond back. 😊 The quickest way to reach out to
-          me is via an email.
+        <p class="justify-text">
+         Are you working on a data-driven project and need a Machine Learning Engineer or Data Scientist to bring it to life?
+Whether you want to collaborate, ask a question, share feedback, or simply say hi 👋, don’t hesitate to reach out!
+
+I’m always open to discussing ideas, tackling data challenges, or exploring innovative applications of AI.
+The quickest way to contact me is via email — I’ll do my best to reply promptly. 😊
         </p>
         <!-- Replace the email with yours -->
-        <a href="mailto:you@example.com" class="btn">you@example.com</a>
+        <a href="signate.pro@gmail.com" class="btn">signate.pro@gmail.com</a>
       </div>
     </div>
   </section>
@@ -214,38 +234,21 @@
     <div class="row">
       <!-- Update the links to point to your accounts -->
       <ul class="footer__social-links">
+        
         <li class="footer__social-link-item">
-          <a href="https://twitter.com/nisarhassan12/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://github.com/nisarhassan12/" title="Link to Github Profile">
+          <a href="https://github.com/Calliope-commits" title="Link to Github Profile">
             <img src="./images/github.svg" class="footer__social-image" alt="Github">
           </a>
         </li>
+        
         <li class="footer__social-link-item">
-          <a href="https://codepen.io/nisar_hassan" title="Link to Codepen Profile">
-            <img src="./images/codepen.svg" class="footer__social-image" alt="Codepen">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/nisar-hassan-naqvi-413466199/">
+          <a href= "linkedin.com/in/aissatou-signate-320278111 ">
             <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
           </a>
         </li>
       </ul>
 
-      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
-      <p>
-        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
-      </p>
-      <div class="footer__github-buttons">
-        <iframe
-          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
-          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
-        </iframe>
-      </div>
+   
     </div>
   </footer>
 
