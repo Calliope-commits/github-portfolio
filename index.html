@@ -63,72 +63,85 @@
   <main role="main">
 
     <!-- ***** Work ***** -->
-
-    <section class="work" id="work">
-              <div class="work__boxes">
+   <section class="work" id="work">
+      <div class="row">
+        <h2>My Work</h2>
+       <div class="work__boxes">
 
           <!-- Each div with the work__box class is a project. -->
-
-          <div class="project__container">
+       <!--
+          <div class="work__box">
+            <div class="work__text">
     <h3 class="section-title">🖼️ Automatic Image Caption Generation</h3>
-    <p class="project__subtitle">Academic Project | Computer Vision & NLP | Dataset: Flickr8k</p>
+    <p class="project__subtitle">Computer Vision & NLP | Dataset: Flickr8k</p>
 
-    <div class="project__content">
+   
       <p>
         This project explores <strong>image captioning</strong>, a challenging multimodal task in artificial intelligence that consists of generating a coherent textual description for a given image. It combines deep learning techniques from both <strong>computer vision</strong> and <strong>natural language processing</strong>.
       </p>
 
-      <h4 class="project__heading">🎯 Objectives</h4>
+      <h4 >🎯 Objectives</h4>
       <ul>
         <li>Automatically generate accurate and meaningful captions for images.</li>
         <li>Implement a deep learning model inspired by the <a href="https://arxiv.org/abs/1411.4555" target="_blank">Show and Tell</a> paper.</li>
         <li>Leverage both visual and semantic features to understand context.</li>
       </ul>
 
-      <h4 class="project__heading">🧠 Model & Architecture</h4>
+      <h4 >🧠 Model & Architecture</h4>
       <ul>
         <li><strong>Image Encoding:</strong> ResNet pretrained on ImageNet; feature vectors of shape <code>(1, 2048)</code> extracted from the penultimate layer (softmax removed).</li>
         <li><strong>Text Encoding:</strong> Word embeddings using GloVe; final embedding matrix of shape <code>(1660, 220)</code> representing a vocabulary of 1660 words.</li>
         <li>Semantic relationships between words (e.g., <em>king - man + woman = queen</em>) are captured through vector arithmetic.</li>
       </ul>
 
-      <h4 class="project__heading">📷 Example Output</h4>
+
+      <h4 >📷 Example Output</h4>
       <div class="work__image-box">
               <img src="./images/multimodal_project.jpg" class="work__image" alt="Project 1" />
-            </div>
-
-      <div class="project__links">
-        <a href="https://github.com/Calliope-commits/Generation-de-la-legende-d-une-image-" target="_blank" class="btn">View GitHub Repo</a>
-        <!-- Optionally, add a demo link if you deploy the project -->
       </div>
-    </div>
-  </div>
-<!--
+         
+
+      <div >
+        <a href="https://github.com/Calliope-commits/Generation-de-la-legende-d-une-image-" target="_blank" class="btn">View GitHub Repo</a>
+ -->
+      
           <div class="work__box">
             <div class="work__text">
-              <h3>Calculator</h3>
+              <h3>🖼️ Automatic Image Caption Generation</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
+                Computer Vision & NLP | Dataset: Flickr8k.
               </p>
-              <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
-              </ul>
+                <p>
+        This project explores <strong>image captioning</strong>, a challenging multimodal task in artificial intelligence that consists of generating a coherent textual description for a given image. It combines deep learning techniques from both <strong>computer vision</strong> and <strong>natural language processing</strong>.
+      </p>
+
+      <h4 >🎯 Objectives</h4>
+      <ul>
+          <li>Generate meaningful captions for images.</li>
+          <li>Implement a model inspired by <a href="https://arxiv.org/abs/1411.4555" target="_blank">Show and Tell</a>.</li>
+          <li>Combine visual and semantic features.</li>
+      </ul>
+
+      <h4 >🧠 Model & Architecture</h4>
+    <ul>
+      <li><strong>Image:</strong> ResNet pretrained on ImageNet; feature vectors from the penultimate layer.</li>
+      <li><strong>Text:</strong> Word embeddings with GloVe; vocab of 1660 words in a (1660, 220) matrix.</li>
+      <li>Captures semantic word relations via vector arithmetic.</li>
+      <p>
+      
+      </p>
+    </ul>
 
               <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
+               <a href="https://github.com/Calliope-commits/Generation-de-la-legende-d-une-image-" target="_blank" class="btn">View GitHub Repo</a>
                 </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
+              
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./images/project-2.png" class="work__image" alt="Project 1" />
+                <div class="work__image-box">
+              <img src="./images/multimodal_project.jpg" class="work__image" alt="Project 1" />
+      </div> 
             </div>
           </div>
 
@@ -164,7 +177,7 @@
     </section>
 
    
-  -->
+  
   
 
     <!-- ***** About ***** -->
