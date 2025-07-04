@@ -68,43 +68,7 @@
         <h2>My Work</h2>
        <div class="work__boxes">
 
-          <!-- Each div with the work__box class is a project. -->
-       <!--
-          <div class="work__box">
-            <div class="work__text">
-    <h3 class="section-title">🖼️ Automatic Image Caption Generation</h3>
-    <p class="project__subtitle">Computer Vision & NLP | Dataset: Flickr8k</p>
 
-   
-      <p>
-        This project explores <strong>image captioning</strong>, a challenging multimodal task in artificial intelligence that consists of generating a coherent textual description for a given image. It combines deep learning techniques from both <strong>computer vision</strong> and <strong>natural language processing</strong>.
-      </p>
-
-      <h4 >🎯 Objectives</h4>
-      <ul>
-        <li>Automatically generate accurate and meaningful captions for images.</li>
-        <li>Implement a deep learning model inspired by the <a href="https://arxiv.org/abs/1411.4555" target="_blank">Show and Tell</a> paper.</li>
-        <li>Leverage both visual and semantic features to understand context.</li>
-      </ul>
-
-      <h4 >🧠 Model & Architecture</h4>
-      <ul>
-        <li><strong>Image Encoding:</strong> ResNet pretrained on ImageNet; feature vectors of shape <code>(1, 2048)</code> extracted from the penultimate layer (softmax removed).</li>
-        <li><strong>Text Encoding:</strong> Word embeddings using GloVe; final embedding matrix of shape <code>(1660, 220)</code> representing a vocabulary of 1660 words.</li>
-        <li>Semantic relationships between words (e.g., <em>king - man + woman = queen</em>) are captured through vector arithmetic.</li>
-      </ul>
-
-
-      <h4 >📷 Example Output</h4>
-      <div class="work__image-box">
-              <img src="./images/multimodal_project.jpg" class="work__image" alt="Project 1" />
-      </div>
-         
-
-      <div >
-        <a href="https://github.com/Calliope-commits/Generation-de-la-legende-d-une-image-" target="_blank" class="btn">View GitHub Repo</a>
- -->
-      
           <div class="work__box">
             <div class="work__text">
               <h3>🖼️ Automatic Image Caption Generation</h3>
@@ -144,6 +108,50 @@
      
             </div>
           </div>
+          
+<div class="work__box">
+  <div class="work__text">
+    <h3>🩺 Machine Learning Model API with Streamlit Interface</h3>
+    <p>
+      Diabetes prediction deployed on Google Cloud Run using Artifact Registry.
+    </p>
+    <p>
+      A diabetes prediction model wrapped in a <strong>FastAPI</strong> REST API with a <strong>Streamlit</strong> frontend. The app is <strong>dockerized</strong> for easy deployment and hosted serverlessly.
+    </p>
+
+    <h4>🎯 Features</h4>
+    <ul>
+      <li>Accurate diabetes risk prediction.</li>
+      <li>FastAPI REST API for model serving.</li>
+      <li>Interactive Streamlit user interface.</li>
+      <li>Docker container for portability.</li>
+      <li>Deployment on Google Cloud Run.</li>
+    </ul>
+
+    <h4>🧪 Testing</h4>
+    <ul>
+    <li>
+      Local tests ensured API and UI reliability before deployment.
+    </li></ul>
+
+    <h4>🔗 Technologies</h4>
+    <ul>
+      <li><strong>FastAPI</strong>, <strong>Streamlit</strong>, <strong>Docker</strong></li>
+      <li><strong>Google Cloud Run</strong>, <strong>Artifact Registry</strong></li>
+    </ul>
+    <p></p>
+
+   
+
+    <div class="work__links">
+      <a href="https://github.com/Calliope-commits/MLops-deployment-projects/tree/main/DiabetesPrediction" target="_blank" class="btn">View GitHub Repo</a>
+    </div>
+  </div>
+  <div class="work__image-box">
+    <img src="./images/mlops_project1.jpg" class="work__image" alt="Diabetes Prediction Project" />
+  </div>
+</div>
+
 
 <div class="work__box">
   <div class="work__text">
