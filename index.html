@@ -1,12 +1,6 @@
 <!-- 
-  Hello 😊.
-
-  This template is designed and developed by Nisar Hassan Naqvi
-  for anyone to use for free or customize the way they like.
-
+  Based on the portfolio template by Nisar Hassan Naqvi
   Github Repo: https://github.com/nisarhassan12/portfolio-template/
-  My Website: https://nisar.dev
-
 -->
 
 <!DOCTYPE html>
@@ -17,14 +11,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 
-  <!-- Put your site title here -->
-  <title>
-    Aïssatou Signaté | A Machine Learning Engineer/ Data Scientist based in Paris, France
-  </title>
+  <title>Aïssatou Signaté | Machine Learning Engineer / Data Scientist based in Paris, France</title>
 
-  <meta name="description" content="Add small description of yourslef.">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Put your name, skills and some coding keywords" />
+  <meta name="description"
+    content="Machine Learning Engineer & Data Scientist based in Paris. Projects in generative AI (RAG, LLMs), computer vision, MLOps and business intelligence.">
+  <meta name="keywords"
+    content="Aïssatou Signaté, Machine Learning Engineer, Data Scientist, Generative AI, LLM, RAG, Computer Vision, MLOps, FastAPI, Docker, Python, Power BI" />
   <link rel="stylesheet" href="index.css" />
 </head>
 
@@ -37,25 +29,17 @@
       <nav class="nav" role="navigation">
         <ul class="nav__items">
           <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
-          </li>
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
       </nav>
     </div>
     <div class="header__text-box row">
       <div class="header__text">
-        <h1 class="heading-primary">
-          <!-- Replace the following name with your name -->
-          <span>Aïssatou Signaté </span>
-        </h1>
-        <!-- Put a small paragraph about yourself -->
-        <p>A Machine Learning Engineer/ Data Scientist based in Paris, France.</p>
-        <a href="#contact" class="btn btn--pink">Get in touch</a>
+        <span class="header__eyebrow">Machine Learning Engineer · Data Scientist</span>
+        <h1 class="heading-primary">Aïssatou Signaté</h1>
+        <p>I build AI applications, from generative AI and RAG to computer vision and MLOps. Based in Paris, France.</p>
+        <a href="#work" class="btn btn--accent">See my work</a>
       </div>
     </div>
   </header>
@@ -63,225 +47,171 @@
   <main role="main">
 
     <!-- ***** Work ***** -->
-   <section class="work" id="work">
+    <section class="work" id="work">
       <div class="row">
         <h2>My Work</h2>
-       <div class="work__boxes">
+
+        <div class="work__filters" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn is-active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="genai">Generative AI &amp; LLMs</button>
+          <button class="filter-btn" data-filter="cv">Computer Vision</button>
+          <button class="filter-btn" data-filter="mlops">Machine Learning &amp; MLOps</button>
+          <button class="filter-btn" data-filter="bi">Data Analysis &amp; BI</button>
+        </div>
 
 
-          <div class="work__box">
-            <div class="work__text">
-              <h3>🖼️ Automatic Image Caption Generation</h3>
-              <p>
-                Computer Vision & NLP | Dataset: Flickr8k.
-              </p>
-                <p>
-        This project explores <strong>image captioning</strong>, a challenging multimodal task in artificial intelligence that consists of generating a coherent textual description for a given image. It combines deep learning techniques from both <strong>computer vision</strong> and <strong>natural language processing</strong>.
-      </p>
+        <!-- ===== Generative AI & LLMs ===== -->
+        <div class="work__category" data-category="genai">
+          <h3 class="work__category-title">Generative AI &amp; LLMs</h3>
+          <p class="work__category-desc">Applications built on large language models.</p>
 
-      <h4 >🎯 Objectives</h4>
-      <ul>
-          <li>Generate meaningful captions for images.</li>
-          <li>Implement a model inspired by <a href="https://arxiv.org/abs/1411.4555" target="_blank">Show and Tell</a>.</li>
-          <li>Combine visual and semantic features.</li>
-      </ul>
+          <div class="work__boxes">
 
-      <h4 >🧠 Model & Architecture</h4>
-    <ul>
-      <li><strong>Image:</strong> ResNet pretrained on ImageNet; feature vectors from the penultimate layer.</li>
-      <li><strong>Text:</strong> Word embeddings with GloVe; vocab of 1660 words in a (1660, 220) matrix.</li>
-      <li>Captures semantic word relations via vector arithmetic.</li>
-      <p>
-      
-      </p>
-    </ul>
-
-              <div class="work__links">
-               <a href="https://github.com/Calliope-commits/Generation-de-la-legende-d-une-image-" target="_blank" class="btn">View GitHub Repo</a>
-                </a>
-              
+            <article class="work__box">
+              <div class="work__image-box">
+                <img src="./images/esg_report_demo.jpg" class="work__image" alt="ESG Report RAG Assistant interface" />
               </div>
-            </div>
-            <div class="work__image-box">
-                
-              <img src="./images/multimodal_project.jpg" class="work__image" alt="Project 1" />
-     
-            </div>
-          </div>
-          
-<div class="work__box">
-  <div class="work__text">
-    <h3>🩺 Machine Learning Model API with Streamlit Interface</h3>
-    <p>
-      Diabetes prediction deployed on Google Cloud Run using Artifact Registry.
-    </p>
-    <p>
-      A diabetes prediction model wrapped in a <strong>FastAPI</strong> REST API with a <strong>Streamlit</strong> frontend. The app is <strong>dockerized</strong> for easy deployment and hosted serverlessly.
-    </p>
-
-    <h4>🎯 Features</h4>
-    <ul>
-      <li>Accurate diabetes risk prediction.</li>
-      <li>FastAPI REST API for model serving.</li>
-      <li>Interactive Streamlit user interface.</li>
-      <li>Docker container for portability.</li>
-      <li>Deployment on Google Cloud Run.</li>
-    </ul>
-
-    <h4>🧪 Testing</h4>
-    <ul>
-    <li>
-      Local tests ensured API and UI reliability before deployment.
-    </li></ul>
-
-    <h4>🔗 Technologies</h4>
-    <ul>
-      <li><strong>FastAPI</strong>, <strong>Streamlit</strong>, <strong>Docker</strong></li>
-      <li><strong>Google Cloud Run</strong>, <strong>Artifact Registry</strong></li>
-    </ul>
-    <p></p>
-
-   
-
-    <div class="work__links">
-      <a href="https://github.com/Calliope-commits/MLops-deployment-projects/tree/main/DiabetesPrediction" target="_blank" class="btn">View GitHub Repo</a>
-    </div>
-  </div>
-  <div class="work__image-box">
-    <img src="./images/mlops_project1.jpg" class="work__image" alt="Diabetes Prediction Project" />
-  </div>
-</div>
-
-
-<div class="work__box">
-  <div class="work__text">
-    <h3>🧠 MySQL Query Generator using LangChain</h3>
-    <p>
-      This project uses <strong>LangChain</strong> and <strong>LLMs</strong> to generate intelligent SQL queries from natural language inputs. It dynamically identifies the right database tables and formulates executable queries.
-    </p>
-
-    <h4>🎯 Key Features</h4>
-    <ul>
-      <li>Dynamic table detection based on user queries.</li>
-      <li>SQL query generation using large language models (LLMs).</li>
-      <li>Contextual memory for handling follow-up questions.</li>
-      <li>Answer rephrasing and optimized SQL output.</li>
-    </ul>
-
-    <h4>🛠️ Technologies</h4>
-    <ul>
-      <li>LangChain & OpenAI</li>
-      <li>Pandas</li>
-      <li>Jupyter Notebook</li>
-    </ul>
-    <p></p>
-
-    <div class="work__links">
-      <a href="https://github.com/Calliope-commits/LLM-projects/tree/main/NL2SQL" target="_blank" class="btn">View GitHub Repo</a>
-    </div>
-  </div>
-  <div class="work__image-box">
-    <img src="./images/nlp_2_sql_project.jpg" class="work__image" alt="LangChain SQL Generator Project" />
-  </div>
-</div>
-
-<div class="work__box">
-  <div class="work__text">
-    <h3>📍 Marker Detection and Classification</h3>
-    <p>
-      Tool for professionals to mark zones of interest that may present anomalies. This project focuses on extracting and classifying these markers to assist expert decision-making.
-    </p>
-
-    <h4>🎯 Objectives</h4>
-    <ul>
-      <li>Identify pointed zones and apply various image processing techniques.</li>
-      <li>Determine arrow orientation (direction and sense).</li>
-      <li>Define extraction zone for the region of interest (ROI).</li>
-      <li>Apply multiple image treatments on the ROI.</li>
-      <p></p>
-    </ul>
-
-    <div class="work__links">
-      <a href="https://github.com/Calliope-commits/Extraction-et-reconnaissance-de-pointeurs-pre-segmentes-sur-des-images-medicales" target="_blank" class="btn">View GitHub Repo</a>
-      
-    </div>
-  </div>
-  <div class="work__image-box">
-    <img src="./images/image_projet_med.jpg" class="work__image" alt="Marker Detection Project" />
-  </div>
-</div>
-
-<div class="work__box">
-  <div class="work__text">
-    <h3>📊 Data Professionals Trends Analysis – Power BI</h3>
-    <p>
-      Business Intelligence | LinkedIn Job Market Data
-    </p>
-    <p>
-      This Power BI project explores data-related job trends by building an interactive dashboard from LinkedIn data. It highlights job titles, in-demand skills, and geographic distribution.
-    </p>
-
-    <h4>🎯 Objectives</h4>
-    <ul>
-      <li>Visualize hiring trends for data jobs using an intuitive dashboard.</li>
-      <li>Identify key skills and most common job titles across locations.</li>
-      <li>Present insights clearly through clean and dynamic visualizations.</li>
-    </ul>
-
-    <h4>🛠️ Tools & Techniques</h4>
-    <ul>
-      <li><strong>Power Query:</strong> for data cleaning and transformation.</li>
-      <li><strong>DAX Measures:</strong> for creating custom KPIs.</li>
-      <li>Interactive dashboard built in Power BI.</li>
-      <li>Includes .pbix file, Excel source data, and PDF report.</li>
-      <p></p>
-    </ul>
-
-    <div class="work__links">
-      <a href="https://github.com/Calliope-commits/Business-analysis-projetcs/tree/main/Data-Professional-Survey-Breakdown" target="_blank" class="btn">View GitHub Repo</a>
-    </div>
-  </div>
-  <div class="work__image-box">
-    <img src="./images/power_bi_project.jpg" class="work__image" alt="Power BI Project Dashboard" />
-  </div>
-</div>
-
-
-<!--
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Notificator</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
-              </p>
-              <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
+              <div class="work__text">
+                <h4>ESG Report RAG Assistant</h4>
+                <ul class="work__tags">
+                  <li class="work__tag">RAG</li>
+                  <li class="work__tag">Energy</li>
+                  <li class="work__tag">ESG</li>
+                </ul>
+                <p>Sustainability reports often run to hundreds of pages. This assistant lets users upload them and ask questions in natural language, with answers grounded in the document and returned with their sources. Ingestion runs as an event-driven pipeline with step tracking and automatic retries.</p>
+                <p class="work__stack"><strong>Stack:</strong> FastAPI, Inngest, Qdrant, OpenAI, Streamlit</p>
+                <div class="work__links">
+                  <a href="https://github.com/Calliope-commits/esg-report-rag" target="_blank" class="btn">View GitHub Repo</a>
+                </div>
               </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-3.png" class="work__image" alt="Project 3" />
-            </div>
+            </article>
+
+            <article class="work__box">
+              <div class="work__image-box">
+                <img src="./images/nlp_2_sql_project.jpg" class="work__image" alt="Natural Language to SQL project" />
+              </div>
+              <div class="work__text">
+                <h4>Natural Language to SQL</h4>
+                <ul class="work__tags">
+                  <li class="work__tag">Text-to-SQL</li>
+                  <li class="work__tag">Business data</li>
+                </ul>
+                <p>Lets non-technical users query a MySQL database in plain English. The model identifies the relevant tables, generates an executable SQL query and rephrases the result, with memory to handle follow-up questions.</p>
+                <p class="work__stack"><strong>Stack:</strong> LangChain, OpenAI, Pandas</p>
+                <div class="work__links">
+                  <a href="https://github.com/Calliope-commits/LLM-projects/tree/main/NL2SQL" target="_blank" class="btn">View GitHub Repo</a>
+                </div>
+              </div>
+            </article>
+
           </div>
         </div>
-      </div>
-    </section>
 
-   
-  -->
-       </div>
+
+        <!-- ===== Computer Vision ===== -->
+        <div class="work__category" data-category="cv">
+          <h3 class="work__category-title">Computer Vision</h3>
+          <p class="work__category-desc">Deep learning and image processing to understand and describe images.</p>
+
+          <div class="work__boxes">
+
+            <article class="work__box">
+              <div class="work__image-box">
+                <img src="./images/multimodal_project.jpg" class="work__image" alt="Image Caption Generation project" />
+              </div>
+              <div class="work__text">
+                <h4>Image Caption Generation</h4>
+                <ul class="work__tags">
+                  <li class="work__tag">Multimodal</li>
+                  <li class="work__tag">NLP</li>
+                </ul>
+                <p>Generates a textual description for any image, a multimodal task combining computer vision and NLP. Visual features from a pretrained ResNet are combined with GloVe word embeddings, following the <a href="https://arxiv.org/abs/1411.4555" target="_blank">Show and Tell</a> architecture, trained on Flickr8k.</p>
+                <p class="work__stack"><strong>Stack:</strong> ResNet, GloVe, Python</p>
+                <div class="work__links">
+                  <a href="https://github.com/Calliope-commits/Generation-de-la-legende-d-une-image-" target="_blank" class="btn">View GitHub Repo</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="work__box">
+              <div class="work__image-box">
+                <img src="./images/image_projet_med.jpg" class="work__image" alt="Medical Marker Detection project" />
+              </div>
+              <div class="work__text">
+                <h4>Medical Marker Detection</h4>
+                <ul class="work__tags">
+                  <li class="work__tag">Healthcare</li>
+                  <li class="work__tag">Image processing</li>
+                </ul>
+                <p>Professionals draw arrows on medical images to flag areas that may present anomalies. This tool detects these markers, determines their orientation and extracts the region of interest they point to, to support expert decision-making.</p>
+                <p class="work__stack"><strong>Stack:</strong> Python, OpenCV</p>
+                <div class="work__links">
+                  <a href="https://github.com/Calliope-commits/Extraction-et-reconnaissance-de-pointeurs-pre-segmentes-sur-des-images-medicales" target="_blank" class="btn">View GitHub Repo</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+
+        <!-- ===== Machine Learning & MLOps ===== -->
+        <div class="work__category" data-category="mlops">
+          <h3 class="work__category-title">Machine Learning &amp; MLOps</h3>
+          <p class="work__category-desc">From model to production: APIs, containers and cloud deployment.</p>
+
+          <div class="work__boxes">
+
+            <article class="work__box">
+              <div class="work__image-box">
+                <img src="./images/mlops_project1.jpg" class="work__image" alt="Diabetes Prediction API project" />
+              </div>
+              <div class="work__text">
+                <h4>Diabetes Prediction API</h4>
+                <ul class="work__tags">
+                  <li class="work__tag">Healthcare</li>
+                  <li class="work__tag">Cloud deployment</li>
+                </ul>
+                <p>A diabetes risk prediction model served through a FastAPI REST API, with a Streamlit interface for end users. The application is containerized with Docker and deployed serverless on Google Cloud Run.</p>
+                <p class="work__stack"><strong>Stack:</strong> FastAPI, Streamlit, Docker, Cloud Run</p>
+                <div class="work__links">
+                  <a href="https://github.com/Calliope-commits/MLops-deployment-projects/tree/main/DiabetesPrediction" target="_blank" class="btn">View GitHub Repo</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+
+        <!-- ===== Data Analysis & BI ===== -->
+        <div class="work__category" data-category="bi">
+          <h3 class="work__category-title">Data Analysis &amp; BI</h3>
+          <p class="work__category-desc">Turning raw data into clear, decision-ready dashboards.</p>
+
+          <div class="work__boxes">
+
+            <article class="work__box">
+              <div class="work__image-box">
+                <img src="./images/power_bi_project.jpg" class="work__image" alt="Data Jobs Market Dashboard project" />
+              </div>
+              <div class="work__text">
+                <h4>Data Jobs Market Dashboard</h4>
+                <ul class="work__tags">
+                  <li class="work__tag">Job market</li>
+                  <li class="work__tag">Dashboard</li>
+                </ul>
+                <p>An interactive Power BI dashboard built from LinkedIn job postings to explore the data job market: most common titles, in-demand skills and geographic distribution. Data is cleaned in Power Query, with custom KPIs in DAX.</p>
+                <p class="work__stack"><strong>Stack:</strong> Power BI, Power Query, DAX</p>
+                <div class="work__links">
+                  <a href="https://github.com/Calliope-commits/Business-analysis-projetcs/tree/main/Data-Professional-Survey-Breakdown" target="_blank" class="btn">View GitHub Repo</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -292,35 +222,24 @@
         <h2>About Me</h2>
         <div class="about__content">
           <div class="about__text">
-            <!-- Replace the below paragraph with info about yourself -->
-          <p style="text-align: justify;">
-              I'm Aissatou Signate, a passionate Machine Learning Engineer and Data Scientist based in Île-de-France, France.
-              I specialize in building smart, scalable AI solutions, particularly in computer vision and deep learning.
+            <p>
+              I'm Aïssatou Signaté, a Machine Learning Engineer and Data Scientist based in Île-de-France, France.
+              I build AI solutions across computer vision, deep learning and, more recently, generative AI:
+              LLM applications, retrieval-augmented generation (RAG) and their deployment.
             </p>
-            <p style="text-align: justify;">
+            <p>
               With a dual background in computer science and economics, I bring both technical expertise and analytical thinking
-              to solve complex problems.
+              to solve complex problems. I'm particularly interested in applying AI to real business needs, such as the energy
+              transition and sustainability reporting.
             </p>
-            <p style="text-align: justify;">
-              Over the past few years, I’ve worked on various impactful projects—from medical image analysis to data-driven
-              decision-making tools. Whether it’s fine-tuning neural networks or exploring new datasets, I thrive on turning data
-              into insights and innovation.
-            </p>
-            <p style="text-align: justify;">
+            <p>
               📍 Based in Paris region, currently open to V.I.E missions, full-time roles, or AI consulting projects.
             </p>
-            <p style="text-align: justify;">
-              Beyond coding, I’m passionate about ethical AI, continuous learning, and creating tools that make a real difference.
-            </p>
-            <a href="mailto:signate.pro@gmail.com?subject=Demande%20de%20CV" class="btn">
-              CV available upon request
-            </a>
+            <a href="mailto:signate.pro@gmail.com?subject=Demande%20de%20CV" class="btn">CV available upon request</a>
           </div>
 
           <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="images/about_me.jpg" alt="" style="width: 600px; height: auto;" />
-
+            <img class="about__photo" src="images/about_me.jpg" alt="Aïssatou Signaté" />
           </div>
         </div>
       </div>
@@ -333,15 +252,11 @@
     <div class="row">
       <h2>Get in Touch</h2>
       <div class="contact__info">
-        <p class="justify-text">
-         Are you working on a data-driven project and need a Machine Learning Engineer or Data Scientist to bring it to life?
-Whether you want to collaborate, ask a question, share feedback, or simply say hi 👋, don’t hesitate to reach out!
-
-I’m always open to discussing ideas, tackling data challenges, or exploring innovative applications of AI.
-The quickest way to contact me is via email — I’ll do my best to reply promptly. 😊
+        <p>
+          Working on a data-driven project and need a Machine Learning Engineer or Data Scientist? Whether you want to
+          collaborate, ask a question or simply say hi 👋, feel free to reach out. Email is the quickest way to contact me.
         </p>
-        <!-- Replace the email with yours -->
-        <a href="signate.pro@gmail.com" class="btn">signate.pro@gmail.com</a>
+        <a href="mailto:signate.pro@gmail.com" class="btn btn--accent">signate.pro@gmail.com</a>
       </div>
     </div>
   </section>
@@ -350,30 +265,44 @@ The quickest way to contact me is via email — I’ll do my best to reply promp
 
   <footer role="contentinfo" class="footer">
     <div class="row">
-      <!-- Update the links to point to your accounts -->
       <ul class="footer__social-links">
-        
         <li class="footer__social-link-item">
-          <a href="https://github.com/Calliope-commits" title="Link to Github Profile">
+          <a href="https://github.com/Calliope-commits" target="_blank" title="Link to Github Profile">
             <img src="./images/github.svg" class="footer__social-image" alt="Github">
           </a>
         </li>
-        
         <li class="footer__social-link-item">
-          <a href= "linkedin.com/in/aissatou-signate-320278111 ">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+          <a href="https://www.linkedin.com/in/aissatou-signate-320278111" target="_blank" title="Link to Linkedin Profile">
+            <img src="./images/linkedin.svg" class="footer__social-image" alt="Linkedin">
           </a>
         </li>
       </ul>
-
-   
     </div>
   </footer>
 
   <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image" />
   </a>
+
   <script src="./index.js"></script>
+
+  <!-- Project category filters -->
+  <script>
+    document.querySelectorAll('.filter-btn').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var filter = button.dataset.filter;
+
+        document.querySelectorAll('.filter-btn').forEach(function (b) {
+          b.classList.toggle('is-active', b === button);
+        });
+
+        document.querySelectorAll('.work__category').forEach(function (category) {
+          var visible = filter === 'all' || category.dataset.category === filter;
+          category.classList.toggle('is-hidden', !visible);
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
